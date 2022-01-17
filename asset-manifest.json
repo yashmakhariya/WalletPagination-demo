@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nft/static/css/main.afaf54c8.css",
-    "main.js": "/nft/static/js/main.6c2e20b5.js",
-    "static/js/787.cc445424.chunk.js": "/nft/static/js/787.cc445424.chunk.js",
-    "index.html": "/nft/index.html",
-    "main.afaf54c8.css.map": "/nft/static/css/main.afaf54c8.css.map",
-    "main.6c2e20b5.js.map": "/nft/static/js/main.6c2e20b5.js.map",
-    "787.cc445424.chunk.js.map": "/nft/static/js/787.cc445424.chunk.js.map"
+    "main.css": "/WalletPagination-demo/static/css/main.afaf54c8.css",
+    "main.js": "/WalletPagination-demo/static/js/main.be045e83.js",
+    "static/js/787.cc445424.chunk.js": "/WalletPagination-demo/static/js/787.cc445424.chunk.js",
+    "index.html": "/WalletPagination-demo/index.html",
+    "main.afaf54c8.css.map": "/WalletPagination-demo/static/css/main.afaf54c8.css.map",
+    "main.be045e83.js.map": "/WalletPagination-demo/static/js/main.be045e83.js.map",
+    "787.cc445424.chunk.js.map": "/WalletPagination-demo/static/js/787.cc445424.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afaf54c8.css",
-    "static/js/main.6c2e20b5.js"
+    "static/js/main.be045e83.js"
   ]
 }
