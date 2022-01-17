@@ -72,7 +72,7 @@ export default function PaginationDynamic(){
 
   const callapi=(e)=>{
     e.preventDefault();
-    console.log("WALLET ID IS: "+walletId);
+    //console.log("WALLET ID IS: "+walletId);
     setCount(1);
     check();
   }
@@ -106,7 +106,7 @@ export default function PaginationDynamic(){
         
           <form  onSubmit={(e)=>callapi(e)}>
         
-              <input ref={walletValue}  type="text" className="w-full px-4 py-1 text-gray-900 rounded-full focus:outline-none " onChange={searchWallet}
+              <input ref={walletValue}  type="text" className="w-full px-4 py-1 text-gray-900 rounded-full focus:outline-none text-center" onChange={searchWallet}
                   placeholder="WALLET NUMBER" x-model="search"/>
           </form>
         </div>
@@ -120,12 +120,12 @@ export default function PaginationDynamic(){
 
    
             
-            <div className="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+            <div className="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 main_content">
                 <header className="px-5 py-4 border-b border-gray-100">
-                    <h2 className="font-semibold text-gray-800">Collaction</h2>
+                    <h2 className="font-semibold text-gray-800">Collections</h2>
                 </header>
                 <div className="p-3">
-                    <div className="overflow-x-auto">
+                    <div className="overflow-x-auto loader_box">
                         <table className="table-auto">
                             <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                                 <tr>
@@ -152,9 +152,6 @@ export default function PaginationDynamic(){
                                     </th>
                                 </tr>
                             </thead>
-      {
-        pageCount===0 && count!==0 ? <div className='loader'></div> : null
-      }
       
       {
         walletId!=="" ?
@@ -190,9 +187,14 @@ export default function PaginationDynamic(){
     
          
           // : null
-        ))
+        )
+        
+        )
+
+       
         : <h4>ENTER YOUR WALLET ID TO SHOW DETAILS</h4>
       }
+          </table>
         
     { pageCount!==0 ?
           <ReactPaginate
@@ -207,7 +209,11 @@ export default function PaginationDynamic(){
               containerClassName={"pagination"}
               subContainerClassName={"pages pagination"}
               activeClassName={"active"}/> : null}
-                               </table>
+               {
+            pageCount===0 && count!==0 ? <div>
+                <div className='loader'></div></div> : null
+          }
+                           
                     </div>
                 </div>
             </div>
