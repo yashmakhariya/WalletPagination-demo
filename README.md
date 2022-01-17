@@ -1,3 +1,3 @@
 # LIVE AT
 
-https://sumitsaurav143.github.io/WalletPagination/
+https://yashmakhariya.github.io/WalletPagination-demo/
