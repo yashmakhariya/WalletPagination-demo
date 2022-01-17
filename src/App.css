@@ -35,6 +35,13 @@ section {
   font-family: 'Poppins', sans-serif !important;
 }
 
+table,th,td{
+  border:1px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+
+  text-align: center;
+}
+
 .SrcBox{
   height:10vh;
   width:100vw;

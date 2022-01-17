@@ -106,7 +106,7 @@ export default function PaginationDynamic(){
         
           <form  onSubmit={(e)=>callapi(e)}>
         
-              <input ref={walletValue}  type="text" className="w-full px-4 py-1 text-gray-900 rounded-full focus:outline-none text-center" onChange={searchWallet}
+              <input ref={walletValue}  type="text" className="w-full px-4 py-1 text-gray-900 rounded-full focus:outline-none " onChange={searchWallet}
                   placeholder="WALLET NUMBER" x-model="search"/>
           </form>
         </div>
@@ -126,29 +126,29 @@ export default function PaginationDynamic(){
                 </header>
                 <div className="p-3">
                     <div className="overflow-x-auto">
-                        <table className="table-auto w-full">
+                        <table className="table-auto">
                             <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                                 <tr>
-                                    <th className="p-2 whitespace-nowrap">
+                                    <th className="">
                                         <div className="font-semibold text-left">Name</div>
                                     </th>
-                                    <th className="p-2 whitespace-nowrap">
+                                    <th className="">
                                         <div className="font-semibold text-left">Volume</div>
                                     </th>
-                                    <th className="p-2 whitespace-nowrap">
+                                    <th className="">
                                         <div className="font-semibold text-left">24h %</div>
                                     </th>
-                                    <th className="p-2 whitespace-nowrap">
-                                        <div className="font-semibold text-center">7d %</div>
+                                    <th className="">
+                                        <div className="font-semibold ">7d %</div>
                                     </th>
-                                    <th className="p-2 whitespace-nowrap">
-                                        <div className="font-semibold text-center">Floor Price</div>
+                                    <th className="">
+                                        <div className="font-semibold ">Floor Price</div>
                                     </th>
-                                    <th className="p-2 whitespace-nowrap">
-                                        <div className="font-semibold text-center">Owners</div>
+                                    <th className="">
+                                        <div className="font-semibold ">Owners</div>
                                     </th>
-                                    <th className="p-2 whitespace-nowrap">
-                                        <div className="font-semibold text-center">Items</div>
+                                    <th className="">
+                                        <div className="font-semibold ">Items</div>
                                     </th>
                                 </tr>
                             </thead>
@@ -160,37 +160,34 @@ export default function PaginationDynamic(){
         walletId!=="" ?
         Data.map((Data, index) => (
           //  Data.slug==walletId ?
-          <div key={index}>
-             <tbody className="text-sm divide-y divide-gray-100">
-                                <tr>
-                                    <td className="p-2 whitespace-nowrap">
+          <tr key={index}>
+                                    <td className="">
                                         <div className="flex items-center">
                                             <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img className="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40" alt="Alex Shatov"/></div>
                                             <div className="font-medium text-gray-800">{Data.name}</div>
                                         </div>
                                     </td>
-                                    <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left">{Data.stats.thirty_day_volume}</div>
+                                    <td className="">
+                                        <div className="text-left">{Data.stats.thirty_day_volume.toFixed(2)}</div>
                                     </td>
-                                    <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left font-medium text-green-500">{Data.stats.one_day_volume}</div>
+                                    <td className="">
+                                        <div className="text-left font-medium text-green-500">{Data.stats.one_day_volume.toFixed(2)}</div>
                                     </td>
-                                    <td className="p-2 whitespace-nowrap">
-                                        <div className="text-lg text-center">{Data.stats.seven_day_volume}</div>
+                                    <td className="">
+                                        <div className="text-lg ">{Data.stats.seven_day_volume.toFixed(2)}</div>
                                     </td>
-                                    <td className="p-2 whitespace-nowrap">
-                                        <div className="text-lg text-center">{Data.stats.floor_price}</div>
+                                    <td className="">
+                                        <div className="text-lg ">{Data.stats.floor_price.toFixed(2)}</div>
                                     </td>
-                                    <td className="p-2 whitespace-nowrap">
-                                        <div className="text-lg text-center">{Data.stats.num_owners}</div>
+                                    <td className="">
+                                        <div className="text-lg ">{Data.stats.num_owners}</div>
                                     </td>
-                                    <td className="p-2 whitespace-nowrap">
-                                        <div className="text-lg text-center">{Data.stats.count}</div>
+                                    <td className="">
+                                        <div className="text-lg ">{Data.stats.count}</div>
                                     </td>
                                 </tr>
                                 
-                            </tbody>
-          </div> 
+    
          
           // : null
         ))
@@ -217,12 +214,6 @@ export default function PaginationDynamic(){
       <div className="my-2">
         <h2 className="text-center secondHeader">Copyright. NFT Floor Chacker - 2022</h2>
       </div>
-        
   </section>
-
-  
-  )
-
-  
+  ) 
 }
-
